@@ -1,0 +1,10 @@
+@import "base/var";
+@import "base/base";
+
+@import "components/card";
+
+body {
+    background-color: $bgColor;
+    color: $color;
+}
+

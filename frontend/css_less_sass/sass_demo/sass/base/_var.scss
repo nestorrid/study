@@ -1,0 +1,26 @@
+@use "sass:math";
+
+$color: red;
+$bgColor: #1e1e1e;
+
+$link-color: #AC54F0;
+
+$base-shadow-color: #AC54F0;
+
+$base-border: 1px solid #ddd;
+$base-shadow: 2px 2px 12px rgba($base-shadow-color, 0.25);
+
+$base-margin: 6px;
+$base-padding: 16px 12px;
+
+$base-line-height: 1.6;
+
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
+
+$base-radius: 20px;
+$radius-sm: math.div($base-radius, 4);
+$radius-md: math.div($base-radius, 2);

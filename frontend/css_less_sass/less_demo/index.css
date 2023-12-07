@@ -1,0 +1,33 @@
+body {
+  background-color: #1E2A3B;
+  color: white;
+}
+#wrap {
+  background-color: #0d192a;
+  color: white;
+  width: 800px;
+  height: 600px;
+}
+#wrap:hover {
+  background-color: #2f3b4c;
+}
+#wrap .box {
+  background-color: deeppink;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+}
+#wrap .content {
+  background-color: deepskyblue;
+}
+#wrap .content .element {
+  padding: 15px 0;
+}
+#wrap .content .element ul {
+  color: red;
+  margin-top: 0;
+}
+#wrap .content .element ol {
+  color: green;
+  margin-top: 0;
+}

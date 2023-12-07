@@ -1,0 +1,42 @@
+@bg-color: #1E2A3B;
+
+body {
+    background-color: @bg-color;
+    color: white;
+}
+
+#wrap {
+    background-color: @bg-color - #111;
+    color: white;
+    width: 800px;
+    height: 600px;
+
+    &:hover {
+        background-color: @bg-color + #111;
+    }
+
+    .box {
+        background-color: deeppink;
+        width: 100%;
+        height: 100px;
+        margin: 0;
+    }
+
+    .content {
+        background-color: deepskyblue;
+
+        .element {
+            padding: 15px 0;
+
+            ul {
+                color: red;
+                margin-top: 0;
+            }
+
+            ol {
+                color: green;
+                margin-top: 0;
+            }
+        }
+    }
+}

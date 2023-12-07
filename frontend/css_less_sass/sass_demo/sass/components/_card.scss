@@ -1,0 +1,29 @@
+@use "sass:math";
+
+.card {
+    max-width: 400px;
+    border: $base-border;
+    border-radius: $radius-md;
+    padding: $base-padding;
+    box-shadow: $base-shadow;
+    color: white;
+
+    &-title {
+        font-size: $font-size-xxl;
+        font-weight: bold;
+        margin-bottom: $base-margin;
+    }
+
+    &-body {
+        font-size: $font-size-lg;
+        line-height: $base-line-height;
+
+        a {
+            color: $link-color;
+            font-size: math.div(100px,3);
+            &:hover{
+                color: lighten($link-color, 15%);
+            }
+        }
+    }
+}
