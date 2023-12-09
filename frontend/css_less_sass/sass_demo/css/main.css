@@ -1,0 +1,37 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+.card {
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px 12px;
+  box-shadow: 2px 2px 12px rgba(172, 84, 240, 0.25);
+  color: white;
+}
+.card-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.card-body {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+.card-body a {
+  color: #AC54F0;
+  font-size: 33.3333333333px;
+}
+.card-body a:hover {
+  color: #ce9af6;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: red;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tweet</title>
+        <link rel="stylesheet" href="base.css" />
+        <style>
+            .tweet {
+                width: 600px;
+                font-size: 2rem;
+                margin: 20px;
+                border: 1px solid #ddd;
+                border-radius: 12px;
+                box-shadow: 0 0 3px white;
+            }
+
+            .avatar {
+                width: 7rem;
+                height: 7rem;
+                border-radius: 50%;
+                background-color: indigo;
+                border: 2px solid #ddd;
+                float: left;
+                margin: 12px 16px;
+            }
+
+            .title {
+                font-size: 3rem;
+                font-weight: bolder;
+                margin: 12px 16px;
+            }
+
+            .content {
+                font-size: 2rem;
+                line-height: 1.5;
+                margin: 12px 16px;
+            }
+
+            .clearfix::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            .clear {
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tweet">
+            <div class="avatar"></div>
+            <div class="title">Some tweet</div>
+            <div class="content clear">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti, cum facilis voluptas nam dolores eligendi obcaecati
+                exercitationem quia fuga totam!
+            </div>
+        </div>
+    </body>
+</html>

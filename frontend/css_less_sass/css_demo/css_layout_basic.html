@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link rel="stylesheet" href="base.css" />
+
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                margin: 20px;
+                padding: 8px;
+                border: 5px solid red;
+            }
+            .box1 {
+                box-sizing: content-box;
+            }
+
+            .box2 {
+                box-sizing: border-box;
+            }
+
+            .inlineblock {
+                display: inline-block;
+            }
+
+            .hidden {
+                overflow: hidden;
+            }
+
+            .scroll {
+                overflow: scroll;
+            }
+
+            .demo {
+                background-color: indigo;
+                border-top: 1px solid darkorchid;
+                line-height: 1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box box1">content size</div>
+        <div class="box box2">box size</div>
+
+        <div>
+            <div class="box">block</div>
+            <span class="box">span</span><span class="box">span</span>
+            <span class="box inlineblock">span</span>
+            <hr />
+            <span class="box inlineblock">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam quaerat eos, sunt, deleniti tempore natus placeat
+                iusto pariatur dolore nemo blanditiis neque in ullam eaque
+                itaque. Laborum repellat eos eius!
+            </span>
+
+            <span class="box inlineblock hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam quaerat eos, sunt, deleniti tempore natus placeat
+                iusto pariatur dolore nemo blanditiis neque in ullam eaque
+                itaque. Laborum repellat eos eius!
+            </span>
+
+            <span class="box inlineblock scroll">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam quaerat eos, sunt, deleniti tempore natus placeat
+                iusto pariatur dolore nemo blanditiis neque in ullam eaque
+                itaque. Laborum repellat eos eius!
+            </span>
+            <hr />
+            <div class="demo" style="font-size: 1em">Some text 1em</div>
+            <div class="demo" style="font-size: 1rem">Some text 1rem</div>
+        </div>
+    </body>
+</html>

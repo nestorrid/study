@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>grid</title>
+        <link rel="stylesheet" href="base.css" />
+        <style>
+            .container {
+                display: grid;
+                width: 90vw;
+                grid-template-columns: 150px 3fr 2fr auto;
+                grid-template-rows: repeat(4, 150px);
+                grid-template-areas:
+                    "menu header header header"
+                    "menu main main aside"
+                    "menu main main aside"
+                    "menu footer footer footer";
+                gap: 5px;
+            }
+
+            .tile {
+                background-color: gold;
+                font-size: 3rem;
+                color: black;
+                padding: 5px;
+            }
+
+            .tile1 {
+                grid-area: header;
+            }
+
+            .tile2 {
+                grid-area: menu;
+            }
+
+            .tile3 {
+                grid-area: main;
+            }
+
+            .tile4 {
+                grid-area: aside;
+            }
+
+            .tile5 {
+                grid-area: footer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="tile tile1">div 1</div>
+            <div class="tile tile2">div 2</div>
+            <div class="tile tile3">div 3</div>
+            <div class="tile tile4">div 4</div>
+            <div class="tile tile5">div 5</div>
+        </div>
+    </body>
+</html>
