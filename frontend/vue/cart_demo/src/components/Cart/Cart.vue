@@ -1,36 +1,59 @@
 <script setup lang="ts">
 
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
+
 import jsonData from "./data.json";
+import { Product, Category } from "./define";
 
-console.log(jsonData);
-
-// interface Product {
-//     id: Number,
-//     name: String,
-//     desc: String,
-//     price: Number,
-//     curprice: Number,
-//     sold: Number,
-//     score: Number,
-//     inventory: Number,
-//     image: String
-// }
-
-interface Category {
-    id: Number,
-    category: String,
-}
+import CartMenuVue from "./CartMenu.vue";
+import ProductsVue from "./Products.vue";
+import CartFooterVue from "./CartFooter.vue";
 
 const categories = reactive(new Array<Category>());
+let products = ref(new Array<Product>());
+const cartItems = reactive(new Array<Product>);
 
-for (let item of jsonData) {
+for (let category of jsonData) {
     categories.push({
-        id: item.id,
-        category: item.category
-    })
+        id: category.id,
+        name: category.category,
+    });
 }
 
+function load_products(catIdx: number): Array<Product> {
+    const arr = new Array<Product>()
+    for (let product of jsonData[catIdx].products) {
+        arr.push(product)
+    }
+    return arr
+}
+
+function menu_selected(index: number) {
+    products.value = load_products(index)
+}
+
+function cart_index_of_product(product: Product): number {
+    return cartItems.findIndex((el) => el.id == product.id && el.name == product.name)
+}
+
+function add_product_to_cart(index: number) {
+    const product = products.value[index]
+
+    if (product.count! == 0) {
+        let idx = cart_index_of_product(product)
+        if (idx !== -1)
+            cartItems.splice(idx, 1)
+    } else {
+        if (cart_index_of_product(product) === -1)
+            cartItems.push(product)
+    }
+}
+
+function update_product_count(index: number, count: number) {
+    products.value[index].count = products.value[index].count ?? 0
+    products.value[index].count! += count
+    add_product_to_cart(index)
+}
 
 </script>
 
@@ -38,13 +61,13 @@ for (let item of jsonData) {
 <template>
     <div class="mobile">
         <div class="menu">
-            menu
+            <CartMenuVue v-model="categories" @select-menu-index="menu_selected"></CartMenuVue>
         </div>
         <div class="products">
-            prodducts
+            <ProductsVue v-model:products="products" @update:product-count="update_product_count"></ProductsVue>
         </div>
         <div class="footer">
-            footer
+            <CartFooterVue v-model:cartItems="cartItems" :threshold-price="30"></CartFooterVue>
         </div>
     </div>
 </template>
@@ -63,7 +86,7 @@ for (let item of jsonData) {
 
 .products {
     position: absolute;
-    background-color: blue;
+    background-color: $bg-color;
     height: auto;
     top: 0;
     left: $mobile-menu-width;
