@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap practice</title>
+        <link
+            rel="stylesheet"
+            href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../node_modules//bootstrap-icons/font/bootstrap-icons.css"
+        />
+        <style>
+            .section {
+                padding: 60px 0;
+                margin-bottom: 15px;
+            }
+
+            .box {
+                height: 30px;
+                width: 30px;
+                background-color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- navi -->
+        <nav class="navibar bg-primary pt-2 pb-2 sticky-top">
+            <div class="container-xl">
+                <div class="navbar-brand">
+                    <div class="fs-3">
+                        <i class="bi bi-journal-bookmark-fill"></i>
+                        Bootstrap5 practice
+                    </div>
+                    <div class="text-muted">常用的BS5 API和组件练习</div>
+                </div>
+            </div>
+        </nav>
+        <div class="section" id="utilities">
+            <div class="container-xl">
+                <h2 class="display-5">Utilities</h2>
+                <hr />
+                <h3>Interaction</h3>
+
+                <p class="text-muted">控制文本选择方式</p>
+
+                <div class="bg-dark text-white p-3 my-2">
+                    <div class="user-select-all">
+                        This paragraph will be entirely selected when clicked by
+                        the user.
+                    </div>
+                    <div class="user-select-auto">
+                        This paragraph has default select behavior.
+                    </div>
+                    <div class="user-select-none">
+                        This paragraph will not be selectable when clicked by
+                        the user.
+                    </div>
+                </div>
+
+                <hr />
+
+                <h3>Flex</h3>
+                <p>通过d-flex快速实现简单的flex布局.</p>
+                <div class="bg-dark text-white p-3 my-2">
+                    <div class="d-flex flex-row mb-3 border">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <div class="d-flex flex-row-reverse border">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                </div>
+                <p>自动调整间距</p>
+                <div class="d-flex mb-3 border">
+                    <div class="p-2 border">Flex item</div>
+                    <div class="p-2 border">Flex item</div>
+                    <div class="p-2 border">Flex item</div>
+                </div>
+
+                <div class="d-flex mb-3 border">
+                    <div class="me-auto p-2 border">Flex item</div>
+                    <div class="p-2 border">Flex item</div>
+                    <div class="p-2 border">Flex item</div>
+                </div>
+
+                <div class="d-flex mb-3 border">
+                    <div class="p-2 border">Flex item</div>
+                    <div class="p-2 border">Flex item</div>
+                    <div class="ms-auto p-2 border">Flex item</div>
+                </div>
+
+                <hr />
+                <h3>Object-fit</h3>
+                <div class="row justify-content-around" style="height: 240px">
+                    <img
+                        src="../assets/image/lucy.png"
+                        class="object-fit-contain border rounded col-2"
+                        alt="avatar"
+                    />
+                    <img
+                        src="../assets/image/lucy.png"
+                        class="object-fit-cover border rounded col-2"
+                        alt="avatar"
+                    />
+                    <img
+                        src="../assets/image/lucy.png"
+                        class="object-fit-fill border rounded col-2"
+                        alt="avatar"
+                    />
+                    <img
+                        src="../assets/image/lucy.png"
+                        class="object-fit-scale border rounded col-2"
+                        alt="avatar"
+                    />
+                    <img
+                        src="../assets/image/lucy.png"
+                        class="object-fit-none border rounded col-2"
+                        alt="avatar"
+                    />
+                </div>
+                <hr />
+                <h3>Position</h3>
+                <div class="position-relative bg-info" style="height: 200px">
+                    <div
+                        class="position-absolute top-0 start-0 translate-middle box"
+                    ></div>
+                    <div
+                        class="position-absolute top-0 start-50 translate-middle box"
+                    ></div>
+                    <div
+                        class="position-absolute top-0 start-100 translate-middle box"
+                    ></div>
+                    <div
+                        class="position-absolute top-50 start-0 translate-middle box"
+                    ></div>
+                    <div
+                        class="position-absolute top-50 start-50 translate-middle box"
+                    ></div>
+                    <div
+                        class="position-absolute top-50 start-100 translate-middle box"
+                    ></div>
+                    <div
+                        class="position-absolute top-100 start-0 translate-middle box"
+                    ></div>
+                    <div
+                        class="position-absolute top-100 start-50 translate-middle box"
+                    ></div>
+                    <div
+                        class="position-absolute top-100 start-100 translate-middle box"
+                    ></div>
+                </div>
+                <hr />
+                <h3>高度工具</h3>
+                <div class="bg-info-subtle" style="height: 200px">
+                    <div
+                        class="h-25 d-inline-block bg-info"
+                        style="width: 80px"
+                    ></div>
+                    <div
+                        class="h-50 d-inline-block bg-info"
+                        style="width: 80px"
+                    ></div>
+                    <div
+                        class="h-75 d-inline-block bg-info"
+                        style="width: 80px"
+                    ></div>
+                    <div
+                        class="h-100 d-inline-block bg-info"
+                        style="width: 80px"
+                    ></div>
+                </div>
+                <hr />
+                <h3>垂直方向对齐</h3>
+                normal text
+                <span class="align-baseline">baseline</span>
+                <span class="align-top">top</span>
+                <span class="align-middle">middle</span>
+                <span class="align-bottom">bottom</span>
+                <span class="align-text-top">text-top</span>
+                <span class="align-text-bottom">text-bottom</span>
+                <hr />
+                <h3>text truncation</h3>
+                <!-- Block level -->
+                <div class="row">
+                    <div class="col-2 text-truncate">
+                        This text is quite long, and will be truncated once
+                        displayed.
+                    </div>
+                </div>
+
+                <!-- Inline level -->
+                <span
+                    class="d-inline-block text-truncate"
+                    style="max-width: 150px"
+                >
+                    This text is quite long, and will be truncated once
+                    displayed.
+                </span>
+            </div>
+        </div>
+
+        <div class="section" id="layout">
+            <div class="container-xl">
+                <h2 class="display-5">Layout</h2>
+                <hr />
+                <h3>clearfix</h3>
+                <div class="clearfix">
+                    <img
+                        src="../assets/image/avatar.png"
+                        class="col-md-6 float-md-end mb-3 ms-md-3 img-fluid"
+                    />
+
+                    <p>
+                        A paragraph of placeholder text. We're using it here to
+                        show the use of the clearfix class. We're adding quite a
+                        few meaningless phrases here to demonstrate how the
+                        columns interact here with the floated image.
+                    </p>
+
+                    <p>
+                        As you can see the paragraphs gracefully wrap around the
+                        floated image. Now imagine how this would look with some
+                        actual content in here, rather than just this boring
+                        placeholder text that goes on and on, but actually
+                        conveys no tangible information at. It simply takes up
+                        space and should not really be read.
+                    </p>
+
+                    <p>
+                        And yet, here you are, still persevering in reading this
+                        placeholder text, hoping for some more insights, or some
+                        hidden easter egg of content. A joke, perhaps.
+                        Unfortunately, there's none of that here.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Id perspiciatis quia error asperiores eius aut nesciunt
+                        repellat dolorum, cumque vitae optio doloremque
+                        exercitationem omnis aliquid facilis, adipisci totam
+                        earum ex cum. Ullam totam saepe sit. Minima consectetur,
+                        dignissimos tempora voluptatem sequi esse sit veniam
+                        expedita ullam rem unde, laboriosam officia repellat
+                        exercitationem error animi maiores soluta quaerat
+                        laborum, deleniti nam praesentium atque? Error doloribus
+                        magnam suscipit a iure voluptatem, saepe excepturi culpa
+                        natus blanditiis fugiat eveniet? Similique officiis
+                        aliquam reprehenderit magni natus amet commodi
+                        recusandae aspernatur perferendis veritatis doloribus
+                        odit expedita temporibus ullam non fugit, accusantium
+                        soluta mollitia. Repellat officiis quam laudantium error
+                        iusto neque itaque est ex quis nulla sapiente aliquid
+                        pariatur quo ea, accusamus repellendus veritatis sint
+                        nobis, autem iure reiciendis voluptatibus qui illum.
+                        Natus accusamus, doloribus laborum tenetur consequuntur
+                        ipsum aspernatur est, maiores, cum eligendi voluptate
+                        suscipit inventore rerum repellat. Molestias pariatur
+                        possimus quam voluptatem culpa, magni itaque, aut iste
+                        aliquid, dolore dignissimos asperiores obcaecati
+                        doloremque inventore animi ipsa esse vel laboriosam. Ex
+                        tenetur, repellendus repudiandae minus omnis, aut
+                        expedita veniam laudantium officia quisquam error eum
+                        tempora ea cumque quibusdam perferendis atque placeat,
+                        explicabo non in asperiores sit. Architecto dicta
+                        blanditiis, sunt commodi velit aliquid totam quisquam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Quae vel consequuntur a quaerat hic adipisci at
+                        amet deleniti perspiciatis consectetur.
+                    </p>
+                    <hr />
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container-xl">
+                <h2 class="dispaly-5">Forms</h2>
+                <hr />
+                <h3>input with dropdown button</h3>
+                <div class="input-group mb-3">
+                    <button
+                        class="btn btn-outline-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Dropdown
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Something else here</a
+                            >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </li>
+                    </ul>
+                    <input
+                        type="text"
+                        class="form-control"
+                        aria-label="Text input with dropdown button"
+                    />
+                </div>
+
+                <div class="input-group mb-3">
+                    <input
+                        type="text"
+                        class="form-control"
+                        aria-label="Text input with dropdown button"
+                    />
+                    <button
+                        class="btn btn-outline-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Dropdown
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Something else here</a
+                            >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="input-group">
+                    <button
+                        class="btn btn-outline-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Dropdown
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">Action before</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Another action before</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Something else here</a
+                            >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </li>
+                    </ul>
+                    <input
+                        type="text"
+                        class="form-control"
+                        aria-label="Text input with 2 dropdown buttons"
+                    />
+                    <button
+                        class="btn btn-outline-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Dropdown
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Something else here</a
+                            >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- sction cards -->
+        <div class="section" id="cards">
+            <div class="container-xl">
+                <h2 class="display-5">Componnts</h2>
+                <hr />
+                <h3>Cards</h3>
+                <p class="lead text-muted">bootstrap basic cards demo</p>
+                <div class="row align-content-center justify-content-center">
+                    <div class="col-10 col-md-6 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <p class="card-subtitle text-muted lead">
+                                    Card sub title
+                                </p>
+                                <p class="card-text">
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary"
+                                    >Go somewhere</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-6 col-xl-4">
+                        <div class="card text-bg-dark">
+                            <img
+                                src="../assets/image/avatar.png"
+                                class="card-img"
+                                alt="..."
+                            />
+                            <div
+                                class="card-img-overlay text-success fw-bolder"
+                            >
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text
+                                    below as a natural lead-in to additional
+                                    content. This content is a little bit
+                                    longer.
+                                </p>
+                                <p class="card-text">
+                                    <small>Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-6 col-xl-4">
+                        <div class="card" style="width: 18rem">
+                            <img
+                                src="../assets/image/avatar.png"
+                                class="card-img-top"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary"
+                                    >Go somewhere</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h3>Carousel</h3>
+
+                <div
+                    id="carouselExampleCaptions"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                >
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3"
+                        ></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img
+                                src="../assets/image/lucy.png"
+                                class="d-block w-100"
+                                alt="..."
+                            />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>
+                                    Some representative placeholder content for
+                                    the first slide.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                                src="../assets/image/lucy.png"
+                                class="d-block w-100"
+                                alt="..."
+                            />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>
+                                    Some representative placeholder content for
+                                    the second slide.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                                src="../assets/image/lucy.png"
+                                class="d-block w-100"
+                                alt="..."
+                            />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>
+                                    Some representative placeholder content for
+                                    the third slide.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev"
+                    >
+                        <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next"
+                    >
+                        <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <hr />
+                <h3>Dropdown split button</h3>
+                <p>
+                    dropdown功能需要popper.js支持, 安装popper:
+                    <strong><mark> npm i @popperjs/core </mark></strong>
+                </p>
+                <!-- Example split danger button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger">Action</button>
+                    <button
+                        type="button"
+                        class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Something else here</a
+                            >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr />
+                <h3>Modal</h3>
+                <!-- Button trigger modal -->
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                >
+                    Launch static backdrop modal
+                </button>
+
+                <!-- Modal -->
+                <div
+                    class="modal fade"
+                    id="staticBackdrop"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                >
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1
+                                    class="modal-title fs-5"
+                                    id="staticBackdropLabel"
+                                >
+                                    Modal title
+                                </h1>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Blanditiis, libero!
+                            </div>
+                            <div class="modal-footer">
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Close
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                    Understood
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h3>Offcanvas</h3>
+                <a
+                    class="btn btn-primary"
+                    data-bs-toggle="offcanvas"
+                    href="#offcanvasExample"
+                    role="button"
+                    aria-controls="offcanvasExample"
+                >
+                    Link with href
+                </a>
+                <button
+                    class="btn btn-primary"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample"
+                    aria-controls="offcanvasExample"
+                >
+                    Button with data-bs-target
+                </button>
+
+                <div
+                    class="offcanvas offcanvas-start"
+                    tabindex="-1"
+                    id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                            Offcanvas
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            Some text as placeholder. In real life you can have
+                            the elements you have chosen. Like, text, images,
+                            lists, etc.
+                        </div>
+                        <div class="dropdown mt-3">
+                            <button
+                                class="btn btn-secondary dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                            >
+                                Dropdown button
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h3>Toasts</h3>
+                <button type="button" class="btn btn-primary" id="liveToastBtn">
+                    Show live toast
+                </button>
+
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div
+                        id="liveToast"
+                        class="toast"
+                        role="alert"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                    >
+                        <div class="toast-header">
+                            <img
+                                src="../assets/image/avatar.png"
+                                class="rounded me-2"
+                                width="50"
+                                height="50"
+                                alt="..."
+                            />
+                            <strong class="me-auto">Bootstrap</strong>
+                            <small>11 mins ago</small>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="toast"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="toast-body">
+                            Hello, world! This is a toast message.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        const toastTrigger = document.getElementById("liveToastBtn");
+        const toastLiveExample = document.getElementById("liveToast");
+
+        if (toastTrigger) {
+            const toastBootstrap =
+                bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+            toastTrigger.addEventListener("click", () => {
+                toastBootstrap.show();
+            });
+        }
+    </script>
+</html>
