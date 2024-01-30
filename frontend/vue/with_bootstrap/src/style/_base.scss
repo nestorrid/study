@@ -1,14 +1,37 @@
-:root{
-    font-size: 62.5%;
-}
+@use 'sass:color';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+$color-bright-black:#545862;
+$color-bright-blue:#61AFEF;
+$color-bright-cyan:#56B6C2;
+$color-bright-green:#98C379;
+$color-bright-magenta:#C678DD;
+$color-bright-red:#E06C75;
+$color-bright-white:#FAF9F7;
+$color-bright-yellow:#0e0d0c;
+$color-cyan:#56B6C2;
+$color-green:#98C379;
+$color-magenta:#C678DD;
+$color-red:#E06C75;
+$color-white:#ABB2BF;
+$color-yellow:#FFC36D;
+$color-blue:#61AFEF;
+$color-black:#282C34;
 
-body{
-    background-color: $color-background;
-    color: $color-foreground;
-}
+$color-primary: #8A56AB;
+$color-primary-dark-1: #3A214B;
+$color-primary-dark-2: #251432;
+$color-secondary: #D289AA;
+$color-gray: #9599B4;
+
+$color-text: $color-white;
+$color-text-quote: $color-gray;
+
+$color-background: $color-black;
+$color-foreground: $color-text;
+
+$color-success: $color-primary;
+$color-info: $color-secondary;
+$color-warning: $color-yellow;
+$color-failed: $color-red;
+$color-danger: $color-bright-red;
+$color-disabled: color.mix($color-primary-dark-2, $color-gray);

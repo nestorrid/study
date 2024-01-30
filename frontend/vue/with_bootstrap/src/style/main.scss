@@ -1,9 +1,3 @@
-@import "./base";
+@import "./variables";
 
-.main-container{
-    width: 100vw;
-    height: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
