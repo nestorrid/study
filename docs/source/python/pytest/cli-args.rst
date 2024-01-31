@@ -1,27 +1,26 @@
-# pytest常用命令行参数
+pytest常用命令行参数
+================================================
 
 * -v: 详细命令行输出
 
 * -s: 不拦截打印文本
 
 * -k: 运行包含指定关键字的测试用例
-
-  * ```ba
-    pytest -k func
-    ```
+    ``pytest -k func``
 
 * -q: 简化输出信息
 
-  * ```bash
-    > pytest -q     
-    .sx..x..........    
-    ```
+  .. code-block:: bash
+  
+    >>> pytest -q     
+    .sx..x..........
 
 * -X: 遇到失败用例时结束.
 
 * -n: 多线程执行测试用例, 需要`pytest-xdist`插件支持
 
-  * ```python
+  .. code-block:: python
+  
     import pytest
     import time
     
@@ -63,11 +62,11 @@
     ==== 6 passed in 2.54s ====
     """
     
-    ```
 
 * -m: 执行带有自定义装饰器标记的测试用例
 
-  * ```python
+  .. code-block:: python
+  
     # 使用自定义标记首先需要对标记进行注册.
     
     # pytest.ini
@@ -89,13 +88,12 @@
     
     # 运行不包含`demo`标记的测试用例
     # > pytest -m "not demo"
-    ```
 
 * --reruns n: 重跑失败的测试用例, 需要使用插件`pytest-rerunfailures`
 
-  * ```python
+  .. code-block:: python
+  
     import pytest
-    
     
     def test_rerun_func():
         """
@@ -106,8 +104,6 @@
         == 1 failed, 24 deselected, 10 rerun in 10.11s ==
         """
         pytest.fail()
-    
-    ```
 
   * --reruns-delay n: 重跑间隔时间
 
