@@ -11,6 +11,8 @@ pytest简单易上手, 功能强大. 可以通过参数化进行快速的自动�
     :maxdepth: 2
 
     basics
+    core
+    marks
     configuration
     cli-args
     plugins
