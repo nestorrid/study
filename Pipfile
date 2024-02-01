@@ -8,6 +8,7 @@ sphinx = "*"
 furo = "*"
 sphinx-copybutton = "*"
 sphinx-inline-tabs = "*"
+sphinx-autobuild = "*"
 
 [dev-packages]
 

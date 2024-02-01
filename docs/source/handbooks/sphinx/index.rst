@@ -127,13 +127,13 @@ Sphinx是用于制作项目文档的框架, 是目前最为流行的python项目
 
 * modules.rst: 模块主页, 包含了所读取模块的内容. 需要修改`index.rst`引入该文件.
 
-  .. code-block:: reST
-  
-    .. toctree::
-       :maxdepth: 2
-       :caption: Contents:
-    
-       modules
+    .. code-block:: reST
+
+        .. toctree::
+            :maxdepth: 2
+            :caption: Contents:
+            
+            modules
     
 
 * target.rst: 模块中的包, 子模块等内容的对应文件. 包含在`modules.rst`文件中, 无需更改
@@ -146,6 +146,22 @@ Sphinx是用于制作项目文档的框架, 是目前最为流行的python项目
 ------------------------------------------------
 
 通过命令 `make html` 构建文档, 会默认输出到 `build/html` 目录下.
+
+自动构建
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+自动构建可以方便的进行实时预览, 安装 `sphinx-autobuild` 插件
+
+.. code-block:: bash
+
+    pipenv install sphinx-autobuild 
+
+在文档路径下运行自动构建命令:
+
+.. code-block:: bash
+
+    sphinx-autobuild source build/html 
+
 
 选择主题
 ------------------------------------------------
