@@ -14,6 +14,11 @@ Welcome to Nestor's documentation
 
    python/index
 
+.. toctree:: 
+   :maxdepth: 2
+
+   frontend/index
+
 .. toctree::
    :maxdepth: 2
 
