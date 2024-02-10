@@ -6,11 +6,11 @@
 Welcome to Nestor's documentation
 ================================================
 
-个人技术学习笔记
+学习笔记
+------------------------------------------------
 
 .. toctree::
    :maxdepth: 2
-   :caption: 学习笔记:
 
    python/index
 
@@ -18,6 +18,11 @@ Welcome to Nestor's documentation
    :maxdepth: 2
 
    frontend/index
+
+.. toctree:: 
+   :maxdepth: 2
+
+   backend/index
 
 .. toctree::
    :maxdepth: 2

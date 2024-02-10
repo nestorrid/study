@@ -13,3 +13,4 @@
     reStructuredText/index
     sphinx/index
     static_blog
+    rest
